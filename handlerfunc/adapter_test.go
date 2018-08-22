@@ -42,22 +42,4 @@ var _ = Describe("HandlerFuncAdapter tests", func() {
 			Expect(resp.StatusCode).To(Equal(200))
 		})
 	})
-
-	Context("Simple ping request, Handler", func() {
-		It("Proxies the event correctly", func() {
-			log.Println("Starting test")
-
-			adapter := handlerfunc.NewHandler(handler{})
-
-			req := events.APIGatewayProxyRequest{
-				Path:       "/ping",
-				HTTPMethod: "GET",
-			}
-
-			resp, err := adapter.Proxy(req)
-
-			Expect(err).To(BeNil())
-			Expect(resp.StatusCode).To(Equal(200))
-		})
-	})
 })
