@@ -6,7 +6,6 @@ package chiadapter
 import (
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
-
 	"github.com/go-chi/chi"
 )
 

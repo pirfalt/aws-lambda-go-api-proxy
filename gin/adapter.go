@@ -5,7 +5,6 @@ package ginadapter
 
 import (
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/awslabs/aws-lambda-go-api-proxy/core"
 	"github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 	"github.com/gin-gonic/gin"
 )
@@ -14,7 +13,7 @@ import (
 // Engine. The library transforms the proxy event into an HTTP request and then
 // creates a proxy response object from the http.ResponseWriter
 type GinLambda struct {
-	core.RequestAccessor
+	httpadapter.HandlerAdapter
 	handler *httpadapter.HandlerAdapter
 }
 

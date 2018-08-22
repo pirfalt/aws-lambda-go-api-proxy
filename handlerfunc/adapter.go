@@ -4,12 +4,11 @@ import (
 	"net/http"
 
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/awslabs/aws-lambda-go-api-proxy/core"
 	"github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 )
 
 type HandlerFuncAdapter struct {
-	core.RequestAccessor
+	httpadapter.HandlerAdapter
 	handler *httpadapter.HandlerAdapter
 }
 
